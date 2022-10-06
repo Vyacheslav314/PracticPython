@@ -6,11 +6,13 @@ path = 'file.txt'
 data = open(path, 'r')
 n = int(input('Введите число '))
 my_list = []
-res = 0
+res = 1
 for i in range(-n, n + 1):
     my_list.append(i)
+    
 for line in data:
-    res += my_list[int(line)]       
+    res *= my_list[int(line)]  
+      
 print(my_list)
 print(res)
 data.close()
