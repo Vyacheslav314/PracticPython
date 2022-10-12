@@ -9,19 +9,71 @@
 from random import randint
 
 
-candies = 2021
-players = ['человек', 'соперник', 'бот', 'умный бот']
+candies = 2022
+players = ['человек', 'соперник', 'бот', 'Умный бот']
 count_players = [0, 0, 0, 0]
 
 tern = randint(0, 4)
 
+while candies > 0:
+    if tern == 0:
+        print(f'осталось {candies} конфет ')
+        print(f'{players[tern]} ходит у вас {count_players[tern]} конфет ')
+        take = int(input('возьмите от 1 до 28 конфет: '))
+        if take <= 28 and take > 1:
+            count_players[tern] += take
+            candies -= take
+            print(f'{players[tern]} берёт {take} конфет теперь у него {count_players[tern]}\n')
+            take = 0
+        else:
+            take = int(input('возьмите от 1 до 28 конфет: \n'))
+        if candies == 0:
+            print(f'{players[tern]} победил!!! ')
+    if tern == 1:
+        print(f'осталось {candies} конфет ')
+        print(f'{players[tern]} ходит у вас {count_players[tern]} конфет')
+        take = int(input('возьмите от 1 до 28 конфет: '))
+        if take <= 28 and take > 1:
+            count_players[tern] += take
+            candies -= take
+            print(f'{players[tern]} берёт {take} конфет теперь у него {count_players[tern]}\n')
+            take = 0
+        else:
+            take = int(input('возьмите от 1 до 28 конфет: '))
+        if candies == 0:
+            print(f'{players[tern]} победил!!! ')
+    if tern == 2:
+        print(f'осталось {candies} конфет ')
+        print(f'{players[tern]} ходит у вас {count_players[tern]} конфет')
+        take = randint(1,29)
+        count_players[tern] += take
+        candies -= take
+        print(f'{players[tern]} берёт {take} конфет теперь у него {count_players[tern]}\n')
+        take = 0
+        if candies == 0:
+            print(f'{players[tern]} победил!!! ')
+    if tern == 3:
+        print(f'осталось {candies} конфет ')
+        print(f'{players[tern]} ходит у вас {count_players[tern]} конфет ')
+        if candies >= 200:
+            take = randint(20,29)
+            count_players[tern] += take
+        if candies <= 112:
+            take = randint(10,15)
+            count_players[tern] += take
+        if candies <= 28:
+            take = candies
+            count_players[tern] += take
+        candies -= take
+        print(f'{players[tern]} берёт {take} конфет теперь у него {count_players[tern]}\n')
+        take = 0
+        if candies == 0:
+            print(f'{players[tern]} победил!!! ')
+            
+        
+    tern += 1
+    if tern >= 4:
+        tern = 0
 
-def tern_players(x):
-    if x == 0:
-        print(f'{players[x]}ходит у вас {count_players[x]} конфет ')
-    if x == 0:
-        print(f'{players[x]}ходит у вас {count_players[x]} конфет ')
-    if x == 0:
-        print(f'{players[x]}ходит у вас {count_players[x]} конфет ')
-    if x == 0:
-        print(f'{players[x]}ходит у вас {count_players[x]} конфет ')
+        
+    
