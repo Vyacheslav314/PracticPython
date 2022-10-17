@@ -31,7 +31,7 @@ def decompression(txt):
     res = ''
     for i in range(len(txt)):
         if  txt[i].isdigit():
-            number = txt[i]
+            number += txt[i]
         else:
             res = res + txt[i] * int(number)
             number = ''
