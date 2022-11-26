@@ -59,3 +59,26 @@ koef1 = create_list(k1)
 koef2 = create_list(k2)
 write_file1(writing_polynomial(koef1))
 write_file2(writing_polynomial(koef2))
+
+# Задана натуральная степень k. Сформировать случайным образом список коэффициентов (значения от 0 до 100) многочлена и записать в файл многочлен степени k.
+# # Пример:
+# # - k=2 => 2*x² + 4*x + 5 = 0 или x² + 5 = 0 или 10*x² = 0
+# # from random import *
+
+# # k = 2
+
+# # a = randint(0, 100)
+# # b = randint(0, 100)
+# # c = randint(0, 100)
+
+# # st = ''
+
+# # if b == 0:
+# #     st = f'{a} * x ** {k} + {c}*x ** {(k -2)} = 0'
+# # if b == 0 and c == 0:
+# #     st = f'{a} * x ** {k} = 0'
+# # else:
+# #     st = f'{a} * x ** {k} + {b} * x ** {(k - 1)} + {c}*x ** {(k -2)} = 0'
+
+# # with open('file2.txt', 'w') as file1:
+# #     file1.write(st)

@@ -5,6 +5,6 @@
 # - [2, 3, 4, 5, 6] => [12, 15, 16];
 # - [2, 3, 5, 6] => [12, 15]
 
-numbers = [2, 3, 5,6]
+numbers = [2, 3, 4, 5, 6, 7, 5]
 diff = list([a*b for a, b in zip(numbers, numbers[:(len(numbers)//2) - 1: -1])])
 print(diff)

@@ -18,11 +18,11 @@ poly2 = read_file2()
 poly3 = []
 poly1 = poly1.replace('=0', '').split('+')
 poly2 = poly2.replace('=0', '').split('+')
-
+print(poly1)
 def convert_poly(poly):
-    poly = [[x for x in list if x] for list in poly]
+    poly = [[x for x in list] for list in poly]
     return poly
-
+print(convert_poly(poly1))
 if len(poly1) < len(poly2):
     poly1, poly2 = poly2, poly1
 
