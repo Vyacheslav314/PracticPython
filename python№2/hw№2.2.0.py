@@ -13,13 +13,15 @@ count = 0
 while x != count:
     print(f'осталось ввести целых чисел {x - count} ')
     num = int(input('Введите целое число '))
-    second_max_number = num
 
     if num > first_max_number:
         second_max_number = first_max_number
         first_max_number = num
+    elif num > second_max_number:
+        second_max_number = num
 
     count += 1
+
 
 print(f'Первое максимальное число {first_max_number}\nвторое максимальное число {second_max_number}')
 
